@@ -111,7 +111,7 @@ function draw() {
     }
 
     //pular quando a tecla espaço for pressionada
-    if (touches.length > 0 || (keyDown("space") && trex.y >= 100)) {
+    if (touches.length > 0 || (keyDown("space") && trex.y >= height-120)) {
       trex.velocityY = -12;
       jumpSound.play();
       touches = [];

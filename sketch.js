@@ -154,9 +154,10 @@ function draw() {
 
   //impedir que o trex caia
   trex.collide(invisibleGround);
-  if (mousePressedOver(restart)) {
-    reset();
-  }
+  if (touches.length > 0 || keyDown("SPACE") || mousePressedOver(restart)) {
+      reset();
+      touches = [];
+    }
 
   drawSprites();
 }
